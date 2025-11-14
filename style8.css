@@ -1,0 +1,53 @@
+/* FULL GREEN BAR */
+.journey {
+  width: 100%;
+  background: #b2d235;
+  padding: 40px 0;
+}
+
+/* CONTENT CENTERED HORIZONTALLY */
+.journey__container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* LEFT TEXT */
+.journey__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGO NEXT TO TEXT */
+.journey__logo {
+  width: 120px;   /* adjust to your real size */
+  height: auto;
+}
+
+/* WHITE BUTTON */
+.journey__button {
+  background: #ffffff;
+  color: #222;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+.journey__button:hover {
+  transform: translateY(-3px);
+}
