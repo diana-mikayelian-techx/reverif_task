@@ -1,0 +1,109 @@
+.explore {
+  padding: 60px 80px 80px;
+  background: #f7f8fa;
+}
+
+.explore__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.explore__title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 32px;
+}
+
+/* GRID */
+
+.explore__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 210px;
+  gap: 20px;
+}
+
+/* CARD BASE */
+
+.explore-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* BIG FIRST CARD */
+
+.explore-card--new-york {
+  grid-column: 1 / 3;   /* spans 2 cols */
+  grid-row: 1 / 3;      /* spans 2 rows */
+}
+
+/* OVERLAY & TEXT */
+
+.explore-card__overlay {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.0)
+  );
+}
+
+.explore-card__city {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.explore-card__listings {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+}
+
+.explore-card__listings-count {
+  color: #b2d235;
+  font-weight: 700;
+}
+
+/* BACKGROUND IMAGES (replace with your real paths) */
+
+.explore-card--new-york {
+  background-image: url("images/listing-newyork.jpg");
+}
+
+.explore-card--california {
+  background-image: url("images/listing-california.jpg");
+}
+
+.explore-card--florida {
+  background-image: url("images/listing-florida.jpg");
+}
+
+.explore-card--hawaii {
+  background-image: url("images/listing-hawaii.jpg");
+}
+
+.explore-card--alaska {
+  background-image: url("images/listing-alaska.jpg");
+}
+
+.explore-card--new-jersey {
+  background-image: url("images/listing-newjersey.jpg");
+}
+
+.explore-card--georgia {
+  background-image: url("images/listing-georgia.jpg");
+}

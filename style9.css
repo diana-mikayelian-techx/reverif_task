@@ -1,0 +1,155 @@
+.footer {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ---------------- TOP LIGHT AREA ---------------- */
+
+.footer__top {
+  background: #f6f6f6;
+  padding: 40px 80px 60px;
+}
+
+/* ----- SOCIAL ICONS ROW ----- */
+.footer__social {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 35px;
+}
+
+.footer__social-link img {
+  width: 30px;
+  height: 30px;
+  transition: 0.2s ease;
+}
+
+.footer__social-link img:hover {
+  transform: translateY(-4px);
+}
+
+/* ----- FOOTER GRID WRAPPER ----- */
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* ---------------- COLUMNS ---------------- */
+
+.footer__col {
+  flex: 1;
+}
+
+/* BRAND COLUMN SIZE */
+.footer__col--brand {
+  max-width: 260px;
+}
+
+.footer__logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* ---------------- CONTACTS ---------------- */
+
+.footer__contacts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.footer__contact-item img {
+  width: 15px;
+  height: 15px;
+}
+
+/* ---------------- HEADINGS + LINKS ---------------- */
+
+.footer__heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #b2d235;
+  margin-bottom: 18px;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: #777;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer__link:hover {
+  color: #b2d235;
+}
+
+/* ---------------- NEWSLETTER ---------------- */
+
+.footer__col--newsletter {
+  max-width: 330px;
+}
+
+.footer__newsletter {
+  display: flex;
+  background: #ffffff;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.footer__newsletter-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  font-size: 13px;
+  color: #666;
+}
+
+.footer__newsletter-input::placeholder {
+  color: #b3b3b3;
+}
+
+.footer__newsletter-button {
+  border: none;
+  padding: 0 26px;
+  background: #b2d235;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------------- BOTTOM DARK BAR ---------------- */
+
+.footer__bottom {
+  background: #222;
+  padding: 18px 0;
+  text-align: center;
+}
+
+.footer__copy {
+  color: #f6f6f6;
+  font-size: 13px;
+}
