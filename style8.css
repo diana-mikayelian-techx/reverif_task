@@ -3,6 +3,12 @@
   width: 100%;
   background: #b2d235;
   padding: 40px 0;
+  width: 1443px;
+  height: 73px;
+  top: 2812px;
+  left: -1px;
+  opacity: 1;
+
 }
 
 /* CONTENT CENTERED HORIZONTALLY */
@@ -14,6 +20,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
+  width: 1443px;
+  height: 73px;
+  top: 2812px;
+  left: -1px;
+  opacity: 1;
+
 }
 
 /* LEFT TEXT */

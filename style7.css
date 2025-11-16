@@ -25,6 +25,12 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
+  width: 401px;
+  height: 131px;
+  top: 67px;
+  left: 520px;
+  opacity: 1;
+
 }
 
 /* WHITE BAR (icon + text input) */
