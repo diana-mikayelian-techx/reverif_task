@@ -1,17 +1,14 @@
-/* FULL GREEN BAR */
+/* =========================================================
+   JOURNEY SECTION — FULL WIDTH GREEN BAR
+   ========================================================= */
+
 .journey {
   width: 100%;
-  background: #b2d235;
-  padding: 40px 0;
-  width: 1443px;
-  height: 73px;
-  top: 2812px;
-  left: -1px;
-  opacity: 1;
-
+  background: var(--color-primary);
+  padding: 20px 0; /* instead of fixed height */
 }
 
-/* CONTENT CENTERED HORIZONTALLY */
+/* CONTAINER */
 .journey__container {
   max-width: 1200px;
   margin: 0 auto;
@@ -19,13 +16,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
-  width: 1443px;
-  height: 73px;
-  top: 2812px;
-  left: -1px;
-  opacity: 1;
 
+  padding: 0 40px; /* space left-right */
 }
 
 /* LEFT TEXT */
@@ -33,7 +25,8 @@
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--color-light);
+
   display: flex;
   align-items: center;
   gap: 10px;
@@ -41,25 +34,83 @@
 
 /* LOGO NEXT TO TEXT */
 .journey__logo {
-  width: 120px;   /* adjust to your real size */
+  width: 110px;
   height: auto;
+  display: inline-block;
 }
 
 /* WHITE BUTTON */
 .journey__button {
-  background: #ffffff;
-  color: #222;
+  background: var(--color-light);
   padding: 12px 32px;
+
   border-radius: 30px;
+  text-decoration: none;
+
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  text-decoration: none;
   font-weight: 600;
+  color: #222;
 
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   transition: 0.2s ease;
 }
 
 .journey__button:hover {
   transform: translateY(-3px);
+}
+
+/* RESPONSIVE*/
+
+/* ===== Tablets ===== */
+@media (max-width: 992px) {
+  .journey__container {
+    padding: 0 24px;
+  }
+
+  .journey__text {
+    font-size: 20px;
+  }
+}
+
+/* ===== Phones ===== */
+@media (max-width: 768px) {
+  .journey {
+    padding: 20px;
+  }
+
+  .journey__container {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .journey__text {
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .journey__logo {
+    width: 90px;
+  }
+
+  .journey__button {
+    padding: 10px 26px;
+    font-size: 14px;
+  }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+  .journey__text {
+    font-size: 16px;
+  }
+
+  .journey__button {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+
+  .journey__logo {
+    width: 80px;
+  }
 }
