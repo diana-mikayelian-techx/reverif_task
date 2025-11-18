@@ -1,95 +1,180 @@
-/* CLAIM SECTION (TEXT + INPUT + BUTTON) */
+/* CLAIM SECTION — MAP + FORM OVERLAY*/
+
 .claim {
-  width: 100%;
-  padding: 50px 0 20px;
-  text-align: center;
+  padding: 0 0 80px;
+  background: #f7f8fa;
 }
 
-.claim__content {
-  max-width: 650px;
+/* WRAPPER AROUND MAP + FORM */
+.claim__map-wrapper {
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* TITLE */
+/* GOOGLE MAP IFRAME */
+.claim__map {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+/* FORM CARD ON TOP OF MAP */
+.claim__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 20px 28px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 320px;
+  max-width: 480px;
+}
+
+/* TITLE INSIDE CARD */
 .claim__title {
   font-family: "Montserrat", sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #222;
-  margin-bottom: 25px;
 }
 
-/* FORM (input + button) */
+/* FORM: INPUT + BUTTON IN ONE ROW */
 .claim__form {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 12px;
-  width: 401px;
-  height: 131px;
-  top: 67px;
-  left: 520px;
-  opacity: 1;
-
+  gap: 8px;
 }
 
-/* WHITE BAR (icon + text input) */
+/* LEFT PART: ICON + INPUT */
 .claim__field {
-  background: #ffffff;
-  padding: 16px 22px;
-  border-radius: 40px;
+  flex: 1;
   display: flex;
   align-items: center;
-  min-width: 380px;
+  gap: 8px;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: var(--color-light);
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: 1px solid #e0e0e0;
 }
 
+/* LOCATION ICON */
 .claim__field-icon {
-  width: 16px;
-  height: 16px;
-  opacity: 0.7;
-  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
+/* INPUT */
 .claim__input {
-  flex: 1;
   border: none;
   outline: none;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
+  color: #555;
 }
 
 .claim__input::placeholder {
   color: #b3b3b3;
 }
 
-/* GREEN BUTTON (arrow) */
+/* GREEN ROUND BUTTON WITH ARROW ICON */
 .claim__button {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
   border: none;
+  border-radius: 999px;
   cursor: pointer;
-  background: #b2d235;
-  color: #ffffff;
-  font-size: 22px;
+
+  width: 48px;
+  height: 48px;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  box-shadow: 0 10px 25px rgba(178, 210, 53, 0.6);
+  background: var(--color-primary);
 }
 
-/* GOOGLE MAP STYLE */
-iframe {
-  width: 100%;
-  height: 420px;
-  border: none;
-  margin-top: 30px;
-  border-radius: 20px;
-
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+/* ARROW ICON IMAGE INSIDE BUTTON */
+.arrow-button {
+  width: 22px;
+  height: 22px;
   display: block;
+}
+
+/* RESPONSIVE*/
+
+/* ===== Tablets ===== */
+@media (max-width: 992px) {
+  .claim__map {
+    height: 400px;
+  }
+
+  .claim__content {
+    padding: 18px 22px;
+    min-width: 280px;
+  }
+}
+
+/* ===== Tablets + Phones ===== */
+@media (max-width: 768px) {
+  .claim {
+    padding: 0 0 60px;
+  }
+
+  .claim__map-wrapper {
+    padding: 0 16px;
+  }
+
+  .claim__map {
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .claim__content {
+    top: auto;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 420px;
+  }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+  .claim__map {
+    height: 320px;
+  }
+
+  .claim__title {
+    font-size: 20px;
+  }
+
+  .claim__content {
+    padding: 14px 18px;
+    gap: 12px;
+  }
+
+  .claim__form {
+    gap: 6px;
+  }
+
+  .claim__button {
+    width: 44px;
+    height: 44px;
+  }
+
+  .arrow-button {
+    width: 18px;
+    height: 18px;
+  }
 }

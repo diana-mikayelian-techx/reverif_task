@@ -1,17 +1,16 @@
-/* ===== FEATURED WRAPPER (the extra div you wanted) ===== */
+/* ===== FEATURED WRAPPER ===== */
 
 .featured {
   width: 100%;
-  padding: 60px 0;       /* space above and below */
-  background: #ffffff;   /* or change if Figma has background */
+  padding: 60px 0;
+  background: var(--color-light);
 }
 
 /* ===== SECTION TITLE ===== */
 
 .listing {
   text-align: center;
-  padding: 0 60px;
-  
+  padding: 0 20px;
 }
 
 .listing__title {
@@ -25,44 +24,55 @@
 /* ===== CARDS WRAPPER ===== */
 
 .listing__cards {
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 40px;                             
-  justify-items: center;                 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
 /* ===== CARD CONTAINER ===== */
 
 .listing-card {
-  width: 340px;
-  background: transparent;
+  background: var(--color-light);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
-  width: 378px;
-height: 332px;
-opacity: 1;
-margin-left: auto;
-margin-right: auto;
+  overflow: hidden; /* clip image corners */
 }
 
 .listing-card:hover {
-  transform:translateY(-6px);
+  transform: translateY(-6px);
 }
+
+/* IMAGE WRAPPER */
+
 .listing-card__image {
   position: relative;
-  width: 379px;
+  width: 100%;
   height: 185px;
+  overflow: hidden;
 }
 
-.listing-card__image img {
-  height: 210px;
+.listing-card__image img:first-child {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  width: 379px;
-height: 185px;
-margin-left: -1px;
-opacity: 1;
+}
 
+/* USER AVATAR ON IMAGE */
+
+.listing-card__image-user {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 3;
+
+  bottom: 16px;
+  left: 20px;
 }
 
 /* ===== BADGES ===== */
@@ -72,49 +82,41 @@ opacity: 1;
   top: 15px;
   left: 15px;
   padding: 4px 12px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: white;
   border-radius: 4px;
 }
 
-
 .listing-card__badge--new {
-  background: #ff7b39;
+  background: var(--color-orange);
 }
 
 .listing-card__badge--rent {
-  background: #b2d235;
+  background: var(--color-primary);
 }
 
 .listing-card__badge--sale {
-  background: #4caf50;
-   margin-left: 70px;
+  background: var(--color-green);
+  left: 90px;
 }
-
-/* ===== AGENT IMAGE ===== */
 
 .listing-card__agent {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   position: absolute;
-  margin-bottom: -20px;
-  margin-right: 15px;
-  border: 3px solid transparent;
-  width: 157.39999389648438;
-height: 15;
-margin-top: 255px;
-margin-left: 16px;
-opacity: 1;
-
+  bottom: -20px;
+  left: 16px;
+  border: 3px solid var(--color-light);
+  object-fit: cover;
 }
 
 /* ===== CARD BODY ===== */
 
 .listing-card__body {
-  padding: 30px 20px 10px;
+  padding: 20px 20px 8px;
   text-align: left;
 }
 
@@ -146,6 +148,10 @@ opacity: 1;
 .listing-card__icons span {
   font-size: 14px;
   color: #555;
+}
+
+.listing-card__icon:active {
+  background: var(--color-primary);
 }
 
 /* ===== FOOTER ===== */
@@ -184,6 +190,49 @@ opacity: 1;
 }
 
 .listing-card__icon--green {
-  border-color: #b2d235;
-  color: #b2d235;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.listing-dots {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.listing-dots img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .listing__cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .listing {
+    padding: 0 16px;
+  }
+
+  .listing__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-card__body {
+    padding: 16px 16px 6px;
+  }
+
+  .listing-card__footer {
+    padding: 10px 16px 16px;
+  }
 }
