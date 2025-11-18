@@ -1,3 +1,5 @@
+/*  EXPLORE SECTION — CLEAN + FULLY RESPONSIVE */
+
 .explore {
   padding: 60px 80px 80px;
   background: #f7f8fa;
@@ -17,16 +19,16 @@
   margin-bottom: 32px;
 }
 
-/* GRID */
+/* ===== GRID ===== */
 
 .explore__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 210px;
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 32px;
 }
 
-/* CARD BASE */
+/* ===== CARD BASE ===== */
 
 .explore-card {
   position: relative;
@@ -34,31 +36,44 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  color: #fff;
   cursor: pointer;
+
+  /* nice dark overlay behind gradient */
+  background-color: rgba(0, 0, 0, 0.25);
+  background-blend-mode: darken;
+
+  /* letting grid control the size */
+  width: 100%;
+  height: 100%;
 }
 
-/* BIG FIRST CARD */
+/* ===== BIG NEW YORK CARD ===== */
 
 .explore-card--new-york {
-  grid-column: 1 / 3;   /* spans 2 cols */
-  grid-row: 1 / 3;      /* spans 2 rows */
+  grid-column: span 2;
+  grid-row: span 2;
+  background-image: url("images/nyc.png");
+  min-height: 500px; /* for desktop */
 }
 
-/* OVERLAY & TEXT */
+/* ===== STANDARD CARD HEIGHT ===== */
+
+.explore-card:not(.explore-card--new-york) {
+  min-height: 240px;
+}
+
+/* ===== OVERLAY & TEXT ===== */
 
 .explore-card__overlay {
   position: absolute;
   inset: 0;
   padding: 24px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.0)
-  );
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
 }
 
 .explore-card__city {
@@ -66,44 +81,121 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 4px;
+  color: var(--color-light);
 }
 
 .explore-card__listings {
-  font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  color: #eee;
 }
 
 .explore-card__listings-count {
-  color: #b2d235;
+  color: var(--color-primary);
   font-weight: 700;
 }
 
-/* BACKGROUND IMAGES (replace with your real paths) */
-
-.explore-card--new-york {
-  background-image: url("images/listing-newyork.jpg");
-}
+/* ===== BACKGROUND IMAGES ===== */
 
 .explore-card--california {
-  background-image: url("images/listing-california.jpg");
+  background-image: url("images/california.png");
 }
 
 .explore-card--florida {
-  background-image: url("images/listing-florida.jpg");
+  background-image: url("images/florida.png");
 }
 
 .explore-card--hawaii {
-  background-image: url("images/listing-hawaii.jpg");
+  background-image: url("images/havaii.png");
 }
 
 .explore-card--alaska {
-  background-image: url("images/listing-alaska.jpg");
+  background-image: url("images/alaska.png");
 }
 
 .explore-card--new-jersey {
-  background-image: url("images/listing-newjersey.jpg");
+  background-image: url("images/new_jersey.png");
 }
 
 .explore-card--georgia {
-  background-image: url("images/listing-georgia.jpg");
+  background-image: url("images/georgia.png");
+}
+
+@media (max-width: 992px) {
+  .explore__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .explore-card--new-york {
+    grid-column: span 3;
+    grid-row: span 2;
+    min-height: 420px;
+  }
+}
+
+/* ===== Tablets + Phones ===== */
+
+@media (max-width: 768px) {
+  .explore {
+    padding: 40px 20px 60px;
+  }
+
+  .explore__grid {
+    /* grid-template-columns: repeat(2, 1fr); */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .explore-card--new-york {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+  }
+
+  .explore-card:not(.explore-card--new-york) {
+    min-height: 200px;
+  }
+}
+
+/* ===== Small Phones ===== */
+
+@media (max-width: 480px) {
+  .explore__title {
+    font-size: 26px;
+  }
+
+  .explore__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-card--new-york {
+    grid-column: span 2/ 2;
+    grid-row: span 2 / 2;
+  }
+
+  .explore-card:not(.explore-card--new-york) {
+    min-height: 180px;
+  }
+  .explore-card--california explore-card--california {
+    grid-column-start: 3;
+  }
+  .explore-card--florida {
+    grid-column-start: 4;
+  }
+
+  .explore-card--hawaii {
+    grid-column-start: 5;
+  }
+
+  .explore-card--alaska {
+    grid-column-start: 3;
+  }
+
+  .explore-card--new-jersey {
+    grid-column-start: 4;
+  }
+
+  .explore-card--georgia {
+    grid-column-start: 5;
+  }
 }
