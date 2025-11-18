@@ -1,0 +1,142 @@
+/* GLOBAL RESET / BASE */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #b2d235;
+  --color_dark: #222222;
+  --color-light: #ffffff;
+  --color-orange: #ff7b39;
+  --color-grey: #555555;
+  --color-white: #f0f0f0;
+    --color-green: #4caf50;
+
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+}
+
+/* ================= HEADER ================ */
+
+.header {
+  width: 100%;
+}
+
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+  background: var(--color_dark);
+}
+
+.header__logo {
+  width: 120px;
+  height: 60px;
+  margin-top: 10px;
+  margin-right: auto;
+}
+
+/* NAV */
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__nav-item {
+  color: var(--color-light);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* ACTIONS */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto;
+}
+
+.header__signin {
+  color: var(--color-light);
+  text-decoration: none;
+}
+
+.header__join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+
+  padding: 12px 27px;
+}
+
+/* ============ HEADER RESPONSIVE ============ */
+
+/* Medium screens – just reduce gaps */
+@media (max-width: 992px) {
+  .header__container {
+    gap: 20px;
+  }
+
+  .header__nav-item {
+    font-size: 14px;
+  }
+}
+
+/* Tablets + phones */
+@media (max-width: 768px) {
+  .header__container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .header__logo {
+    margin: 0;
+    width: 100px;
+    height: auto;
+  }
+
+  .header__actions {
+    order: 2;
+    margin-left: 0;
+  }
+
+  .header__nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .header__nav-item {
+    font-size: 13px;
+  }
+
+  .header__join {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}

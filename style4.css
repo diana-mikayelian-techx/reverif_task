@@ -1,0 +1,293 @@
+.events {
+  padding: 60px 80px 80px;
+  background: #f7f8fa;
+}
+
+.events__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Title */
+
+.events__title {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+
+/* Tabs */
+
+.events__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.events__tab {
+  background: none;
+  border: none;
+  padding: 5px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #777;
+  cursor: pointer;
+  position: relative;
+}
+
+.events__tab--active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.events__tab--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--color-primary);
+}
+
+/* Content row */
+
+.events__content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Arrows */
+
+.events__arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-light);
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.events__arrow--left {
+  margin-right: 10px;
+}
+
+.events__arrow--right {
+  margin-left: 10px;
+}
+
+/* Cards list */
+
+.events__list {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+}
+
+/* Card */
+
+.event-card {
+  background: var(--color-light);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 260px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 260px;
+}
+
+/* Image */
+
+.event-card__image-wrapper {
+  position: relative;
+}
+
+.event-card__image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+/* Badge */
+
+.event-card__badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-light);
+}
+
+.event-card__badge--personal {
+  background: var(--color-orange);
+}
+
+.event-card__badge--webinar {
+  background: #6c9eff;
+}
+
+/* Date badge */
+
+.event-card__date {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 4px;
+  padding: 6px 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.event-card__date-day {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.event-card__date-month {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* Body */
+
+.event-card__body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.event-card__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.event-card__info {
+  font-size: 13px;
+  color: #888;
+}
+
+/* Footer */
+
+.event-card__footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Actions */
+
+.event-card__actions {
+  display: flex;
+  gap: 8px;
+}
+
+.event-card__circle-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Attendees */
+
+.event-card__attendees {
+  font-size: 13px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.event-card__attendees span {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .events {
+    padding: 50px 40px 60px;
+  }
+
+  .events__list {
+    gap: 20px;
+  }
+}
+
+/* Tablets + phones */
+@media (max-width: 768px) {
+  .events {
+    padding: 40px 20px 50px;
+  }
+
+  .events__tabs {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .events__content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .events__arrow {
+    align-self: center;
+  }
+
+  .events__list {
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .events__list::-webkit-scrollbar {
+    height: 6px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .events__title {
+    font-size: 26px;
+  }
+
+  .events__tab {
+    font-size: 14px;
+  }
+
+  .event-card {
+    width: 220px;
+    flex: 0 0 220px;
+  }
+}

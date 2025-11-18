@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style3.css" />
+    <link rel="stylesheet" href="style4.css" />
+    <link rel="stylesheet" href="style5.css" />
+    <link rel="stylesheet" href="style6.css" />
+    <link rel="stylesheet" href="style7.css" />
+    <link rel="stylesheet" href="style8.css" />
+    <link rel="stylesheet" href="style9.css" />
+</head>
+<body>
+<header class="header">
+    <div class="header__container">
+
+        <!-- Logo -->
+        <img src="images/logo.png" alt="Reverifi Logo" class="header__logo" />
+
+        <!-- Navigation -->
+        <nav class="header__nav">
+            <a href="#" class="header__nav-item">How we Work</a>
+            <a href="#" class="header__nav-item">Find an Agent</a>
+            <a href="#" class="header__nav-item">Knowledge Center</a>
+        </nav>
+
+        <!-- Actions -->
+        <div class="header__actions">
+            <a href="#" class="header__signin">Sign In</a>
+            <button class="header__join">Join Now</button>
+        </div>
+
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero__container">
+
+        <!-- Left: Text + Search -->
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Search our listings for <br />
+                your next purchase
+            </h1>
+
+            <form class="hero__search">
+                <div class="hero__search-field">
+                    <img
+                            src="images/icon-location.png"
+                            alt=""
+                            class="hero__search-location"
+                    />
+                    <input
+                            type="text"
+                            class="hero__search-input"
+                            placeholder="Enter City, neighborhood, ZIP, or address"
+                    />
+                    <button class="hero__search-button" type="submit">
+                    <img
+                            src="images/icon-search.png"
+                            alt="Search"
+                            class="hero__search-icon"
+                    />
+                </button>
+                </div>
+
+                
+            </form>
+        </div>
+
+        <!-- Right: Illustration -->
+        <div class="hero__image-wrapper">
+            <img
+                    src="images/hero-image.png"
+                    alt="House and happy couple illustration"
+                    class="hero__image"
+            />
+        </div>
+
+    </div>
+</section>
+<div class="featured">
+
+    <section class="listing">
+        <h2 class="listing__title">Our Featured Listing</h2>
+
+        <div class="listing__cards">
+
+            <!-- CARD 1 -->
+            <div class="listing-card">
+                <div class="listing-card__image">
+                    <img src="images/apartment1.png" alt="Apartment" />
+                    <img src="images/user.png" alt="user" class="listing-card__image-user" />
+                    <span class="listing-card__badge listing-card__badge--new">New</span>
+                </div>
+
+                <div class="listing-card__body">
+                    <h3 class="listing-card__name">Apartment#1</h3>
+                    <p class="listing-card__location">Bronx, NY 10459</p>
+                    <div class="listing-card__distance">1.1km away</div>
+                    <div class="listing-card__icons">
+                        <span>
+                            <img src="images/rooms.png" alt="rooms" />
+                        </span>
+                    </div>
+                </div>
+
+                <div class="listing-card__footer">
+                    <p class="listing-card__price">$30,000</p>
+                    <div class="listing-card__actions">
+                        <button class="listing-card__icon">
+                            <img src="images/like.png" alt="like" />
+                        </button>
+                        <button class="listing-card__icon">
+                            <img src="images/share.png" alt="share" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="listing-card">
+                <div class="listing-card__image">
+                    <img src="images/apartment2.png" alt="Apartment" />
+                    <img src="images/user.png" alt="user" class="listing-card__image-user" />
+                    <span class="listing-card__badge listing-card__badge--rent">Rent</span>
+                </div>
+
+                <div class="listing-card__body">
+                    <h3 class="listing-card__name">Apartment#1</h3>
+                    <p class="listing-card__location">Bronx, NY 10459</p>
+                    <div class="listing-card__distance">1.1km away</div>
+                    <div class="listing-card__icons">
+                        <span>
+                            <img src="images/rooms.png" alt="rooms" />
+                        </span>
+                    </div>
+                </div>
+
+                <div class="listing-card__footer">
+                    <p class="listing-card__price">$123/Month</p>
+                    <div class="listing-card__actions">
+                        <button class="listing-card__icon">
+                            <img src="images/like.png" alt="like" />
+                        </button>
+                        <button class="listing-card__icon">
+                            <img src="images/share.png" alt="share" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="listing-card">
+                <div class="listing-card__image">
+                    <img src="images/apartment3.png" alt="Apartment" />
+                    <img src="images/user.png" alt="user" class="listing-card__image-user" />
+                    <span class="listing-card__badge listing-card__badge--new">New</span>
+                    <span class="listing-card__badge listing-card__badge--sale">Sale</span>
+                </div>
+
+                <div class="listing-card__body">
+                    <h3 class="listing-card__name">Apartment#1</h3>
+                    <p class="listing-card__location">Bronx, NY 10459</p>
+                    <div class="listing-card__distance">1.1km away</div>
+                    <div class="listing-card__icons">
+                        <span>
+                            <img src="images/rooms.png" alt="rooms" />
+                        </span>
+                    </div>
+                </div> 
+                <div class="listing-card__footer">
+                    <p class="listing-card__price">$30,000</p>
+                    <div class="listing-card__actions">
+                        <button class="listing-card__icon">
+                            <img src="images/like.png" alt="like" />
+                        </button>
+                        <button class="listing-card__icon">
+                            <img src="images/share.png" alt="share" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div> 
+
+        
+        <div class="listing-dots">
+            <img src="images/dots.png" alt="dots" />
+        </div>
+
+    </section>
+
+</div>
+
+<section class="events">
+    <div class="events__container">
+
+        <!-- Title -->
+        <h2 class="events__title">Events</h2>
+
+        <!-- Tabs -->
+        <div class="events__tabs">
+            <button class="events__tab events__tab--active">All</button>
+            <button class="events__tab">Upcoming</button>
+            <button class="events__tab">Past</button>
+        </div>
+
+        <div class="events__content">
+
+            <!-- Left arrow -->
+            <button class="events__arrow events__arrow--left">
+                <img src="images/left-arrow.png" alt="left buttom">
+            </button>
+
+            <!-- Cards -->
+            <div class="events__list">
+
+                <!-- CARD 1 -->
+                <article class="event-card">
+                    <div class="event-card__image-wrapper">
+                        <img src="images/events1.png" alt="Event" class="event-card__image" />
+
+                        <span class="event-card__badge event-card__badge--personal">
+              Personal
+            </span>
+
+                        <div class="event-card__date">
+                            <span class="event-card__date-day">08</span>
+                            <span class="event-card__date-month">OCT</span>
+                        </div>
+                    </div>
+
+                    <div class="event-card__body">
+                        <h3 class="event-card__title">Lorem ipsum</h3>
+                        <p class="event-card__info">
+                            7:30 - 10:30PM @someplace
+                        </p>
+
+                        <div class="event-card__footer">
+                            <div class="event-card__actions">
+                                <button class="event-card__circle-btn">
+                                    <img src="images/cart.png" alt="cart">
+                                </button>
+                                <button class="event-card__circle-btn">
+                                    <img src="images/share.png" alt="share"> </button>
+                            </div>
+                        </div>
+                            <div class="event-card__attendees">
+                                <img src="images/attendees.png" alt="attendees">                                </button>
+
+                            </div>
+                        </div>
+
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="event-card">
+                    <div class="event-card__image-wrapper">
+                        <img src="images/events2.png" alt="Event" class="event-card__image" />
+
+                        <span class="event-card__badge event-card__badge--personal">
+              Personal
+            </span>
+                        <div class="event-card__date">
+                            <span class="event-card__date-day">08</span>
+                            <span class="event-card__date-month">OCT</span>
+                        </div>
+                    </div>
+
+                    <div class="event-card__body">
+                        <h3 class="event-card__title">Lorem ipsum</h3>
+                        <p class="event-card__info">
+                            7:30 - 10:30PM @someplace
+                        </p>
+                        </div>
+                    <div class="event-card__footer">
+                        <div class="event-card__actions">
+                            <button class="event-card__circle-btn">
+                                <img src="images/cart.png" alt="cart">
+                            </button>
+                            <button class="event-card__circle-btn">
+                                <img src="images/share.png" alt="share"> </button>
+                        </div>
+                    </div>
+                    <div class="event-card__attendees">
+                        <img src="images/attendees.png" alt="attendees"></button>
+
+                    </div>
+
+            </article>
+
+                <!-- CARD 3 -->
+                <article class="event-card">
+                    <div class="event-card__image-wrapper">
+                        <img src="images/events3.png" alt="Event" class="event-card__image" />
+
+                        <span class="event-card__badge event-card__badge--webinar">
+              Webinar
+            </span>
+
+                        <div class="event-card__date">
+                            <span class="event-card__date-day">08</span>
+                            <span class="event-card__date-month">OCT</span>
+                        </div>
+                    </div>
+
+                    <div class="event-card__body">
+                        <h3 class="event-card__title">Lorem ipsum</h3>
+                        <p class="event-card__info">
+                            7:30 - 10:30PM @someplace
+                        </p>
+
+                        <div class="event-card__footer">
+                            <div class="event-card__actions">
+                                <button class="event-card__circle-btn">
+                                    <img src="images/cart.png" alt="cart">
+                                </button>
+                                <button class="event-card__circle-btn">
+                                    <img src="images/share.png" alt="share"> </button>
+                            </div>
+                        </div>
+                        <div class="event-card__attendees">
+                            <img src="images/attendees.png" alt="attendees"></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- CARD 4 -->
+                <article class="event-card">
+                    <div class="event-card__image-wrapper">
+                        <img src="images/events4.png" alt="Event" class="event-card__image" />
+
+                        <span class="event-card__badge event-card__badge--webinar">
+              Webinar
+            </span>
+
+                        <div class="event-card__date">
+                            <span class="event-card__date-day">08</span>
+                            <span class="event-card__date-month">OCT</span>
+                        </div>
+                    </div>
+
+                    <div class="event-card__body">
+                        <h3 class="event-card__title">Lorem ipsum</h3>
+                        <p class="event-card__info">
+                            7:30 - 10:30PM @someplace
+                        </p>
+
+                        <div class="event-card__footer">
+                            <div class="event-card__actions">
+                                <button class="event-card__circle-btn">
+                                    <img src="images/cart.png" alt="cart">
+                                </button>
+                                <button class="event-card__circle-btn">
+                                    <img src="images/share.png" alt="share"> </button>
+                            </div>
+                        </div>
+                        <div class="event-card__attendees">
+                            <img src="images/attendees.png" alt="attendees"></button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Right arrow -->
+            <button class="events__arrow events__arrow--right">
+                <img src="images/right-arrow.png" alt="right buttom">
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<section class="support">
+    <div class="support__container">
+
+        <!-- LEFT SIDE -->
+        <div class="support__info">
+            <h2 class="support__logo">
+                reverifi<span class="support__logo-plus">+</span>
+            </h2>
+
+            <p class="support__text">
+                Search our network and find your supporting team to
+                complete the process
+            </p>
+
+            <button class="support__button">See More</button>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="support__grid">
+            <div class="support__item">
+                <img src="images/attorney.png" alt="" class="support__icon" />
+                <span class="support__label">Attorney</span>
+            </div>
+
+            <div class="support__item">
+                <img src="images/photographer.png" alt="" class="support__icon" />
+                <span class="support__label">Photographer</span>
+            </div>
+
+            <div class="support__item">
+                <img src="images/agent.png" alt="" class="support__icon" />
+                <span class="support__label">Agent</span>
+            </div>
+
+            <div class="support__item">
+                <img src="images/cleaning.png" alt="" class="support__icon" />
+                <span class="support__label">Cleaning Services</span>
+            </div>
+
+            <div class="support__item">
+                <img src="images/inspection.png" alt="" class="support__icon" />
+                <span class="support__label">Home Inspectors</span>
+            </div>
+
+            <div class="support__item">
+                <img src="images/insurance.png" alt="" class="support__icon" />
+                <span class="support__label">Insurance Provider</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="explore">
+    <div class="explore__container">
+        <h2 class="explore__title">Explore our Listings</h2>
+
+        <div class="explore__grid">
+
+            <!-- BIG CARD – NEW YORK -->
+            <article class="explore-card explore-card--new-york">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">New York</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">2</span> Listings
+                    </p>
+                </div>
+            </article>
+
+            <!-- CALIFORNIA -->
+            <article class="explore-card explore-card--california">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">California</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">43</span> Listings
+                    </p>
+                </div>
+            </article>
+
+            <!-- FLORIDA -->
+            <article class="explore-card explore-card--florida">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">Florida</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">23</span> Listings
+                    </p>
+                </div>
+            </article>
+
+            <!-- HAWAII -->
+            <article class="explore-card explore-card--hawaii">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">Hawaii</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">53</span> Listings
+                    </p>
+                </div>
+            </article>
+
+            <!-- ALASKA -->
+            <article class="explore-card explore-card--alaska">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">Alaska</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">5</span> Listings
+                    </p>
+                </div>
+            </article>
+
+            <!-- NEW JERSEY -->
+            <article class="explore-card explore-card--new-jersey">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">New Jersey</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">89</span> Listings
+                    </p>
+                </div>
+            </article>
+
+            <!-- GEORGIA -->
+            <article class="explore-card explore-card--georgia">
+                <div class="explore-card__overlay">
+                    <h3 class="explore-card__city">Georgia</h3>
+                    <p class="explore-card__listings">
+                        <span class="explore-card__listings-count">17</span> Listings
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+<section class="claim">
+  <div class="claim__map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190.82203923029388!2d44.5044150652254!3d40.177774399577004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abcff3f12b717%3A0xb41f8fb48955af6f!2s8%20Mesrop%20Mashtots%20Ave%2C%20Yerevan%200015!5e0!3m2!1sen!2sam!4v1763072336415!5m2!1sen!2sam"
+      class="claim__map"
+      width="600"
+      height="450"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <div class="claim__content">
+      <h2 class="claim__title">Claim your Address</h2>
+
+      <form class="claim__form">
+        <div class="claim__field">
+          <img src="images/icon-location.png" alt="" class="claim__field-icon" />
+          <input
+            type="text"
+            class="claim__input"
+            placeholder="Enter your Address"
+          />
+        </div>
+
+        <button class="claim__button" type="submit">
+            <img src="images/arrow-buttun.png" alt="button" class="arrow-button">
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="journey">
+    <div class="journey__container">
+
+        <p class="journey__text">
+            Start your real estate journey with
+            <img src="images/logo-white.png" alt="Reverifi" class="journey__logo">
+        </p>
+
+        <a href="#" class="journey__button">Join us</a>
+
+    </div>
+</section>
+    <footer class="footer">
+
+  <!-- TOP LIGHT SECTION -->
+  <div class="footer__top">
+
+    <!-- SOCIAL ICONS ROW -->
+    <div class="footer__social">
+      <a href="#" class="footer__social-link">
+        <img src="images/fb.png" alt="Facebook" />
+      </a>
+      <a href="#" class="footer__social-link">
+        <img src="images/ig.png" alt="Instagram" />
+      </a>
+      <a href="#" class="footer__social-link">
+        <img src="images/youtube.png" alt="YouTube" />
+      </a>
+      <a href="#" class="footer__social-link">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+    </div>
+
+    <!-- COLUMNS WRAPPER -->
+    <div class="footer__container">
+
+      <!-- COLUMN 1: LOGO + CONTACTS -->
+      <div class="footer__col footer__col--brand">
+        <img src="images/logo.png" alt="Reverifi" class="footer__logo" />
+
+        <ul class="footer__contacts">
+            <li class="footer__contact-item">
+            <span>
+                <img src="images/location.png" alt="location">712-427-1242</span>
+          </li>
+          <li class="footer__contact-item">
+            <img src="images/mail.png" alt="" />
+            <span>support@example.com</span>
+          </li>
+          <li class="footer__contact-item">
+            <img src="images/phone.png" alt="phone" />
+            <span>319-764-9876</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 2: HELPFUL LINK -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Helpful Link</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">Sign in</a></li>
+          <li><a href="#" class="footer__link">Support</a></li>
+          <li><a href="#" class="footer__link">FAQ’s</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 3: COMPANY -->
+      <div class="footer__col">
+        <h4 class="footer__heading">Company</h4>
+        <ul class="footer__list">
+          <li><a href="#" class="footer__link">About us</a></li>
+          <li><a href="#" class="footer__link">Privacy</a></li>
+          <li><a href="#" class="footer__link">Terms of use</a></li>
+          <li><a href="#" class="footer__link">Accessibility</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMN 4: NEWSLETTER -->
+      <div class="footer__col footer__col--newsletter">
+        <h4 class="footer__heading">Subscribe to our Newsletter</h4>
+
+        <form class="footer__newsletter">
+          <input
+            type="email"
+            class="footer__newsletter-input"
+            placeholder="Subscribe to our Newsletter"
+          />
+          <button type="submit" class="footer__newsletter-button">
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+    </div> 
+
+  </div> 
+
+  <!-- BOTTOM DARK STRIP -->
+  <div class="footer__bottom">
+    <p class="footer__copy">
+      Copyright © 2021 Reverifi. All rights reserved
+    </p>
+  </div>
+
+</footer>
+
+</body>
+</html>
